@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои ссылки</title>
+    <title>Crooked Road</title>
+    <link rel="icon" href="https://crookedroad.github.io/sites-pages/icons/crookedRoad_icon.png">
     <style>
         :root {
+            /* Основной фон всей страницы */
             --bg-color: #111112;
+            /* Цвет текста */
             --text-color: #f8fafc;
+            /* Цвет подложки под всем блоком */
+            --main-panel-bg: #14171c;
+            /* Цвет самих кнопок-ссылок внутри блока */
             --card-bg: #1e293b;
+            /* Цвет кнопок при наведении */
             --card-hover: #334155;
+            /* Акцентный цвет (для обводки и подзаголовков) */
             --accent-color: #ec8a05;
         }
 
@@ -27,13 +35,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .container {
             width: 100%;
             max-width: 480px;
             text-align: center;
+            background-color: var(--main-panel-bg);
+            padding: 40px 32px;
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+
+        /* Описание эффекта выезда снизу */
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px); /* Стартовая позиция: смещен вниз на 100px */
+                opacity: 0;                   /* Полностью прозрачный */
+            }
+            to {
+                transform: translateY(0);     /* Конечная позиция: на своем месте */
+                opacity: 1;                   /* Полностью видимый */
+            }
         }
 
         .profile-img {
@@ -96,6 +124,20 @@
             padding-right: 32px; /* Компенсируем ширину иконки, чтобы текст был ровно по центру */
         }
 
+        /* Стили для подзаголовков между кнопками */
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-color);
+            text-align: center;
+            margin-top: 12px;
+            margin-bottom: 4px;
+            padding-left: 4px;
+            opacity: 0.9;
+        }
+
         .link-card:hover {
             background-color: var(--card-hover);
             transform: translateY(-2px);
@@ -121,22 +163,24 @@
 
         <!-- Список кнопок-ссылок -->
         <div class="links-container">
+            <div class="section-title">Свежие новости разработки</div>
             <a href="https://t.me/crooked_road" target="_blank" class="link-card">
-                <img class="btn-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/3840px-Telegram_2019_Logo.svg.png" alt="Telegram">
+                <img class="btn-icon" src="https://crookedroad.github.io/sites-pages/icons/telegram_logo.png" alt="Telegram">
                 <span class="btn-text">Telegram канал</span>
             </a>
             <a href="https://vk.com/crooked_road" target="_blank" class="link-card">
-                <img class="btn-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="Telegram">
+                <img class="btn-icon" src="https://crookedroad.github.io/sites-pages/icons/vk_logo.png" alt="ВКонтакте">
                 <span class="btn-text">Сообщество ВКонтакте</span>
             </a>
 
+            <div class="section-title">Проекты в Steam</div>
             <a href="https://store.steampowered.com/app/4095190/Angels_Dreams/" target="_blank" class="link-card">
-                <img class="btn-icon" src="https://unsplash.com" alt="Telegram">
-                <span class="btn-text">Angel`s Dreams в Steam</span>
+                <img class="btn-icon" src="https://crookedroad.github.io/sites-pages/icons/angelDreams_icon.png" alt="Angel`s Dreams">
+                <span class="btn-text">Angel`s Dreams</span>
             </a>
             <a href="https://store.steampowered.com/app/2799360/iZolated/" target="_blank" class="link-card">
-                <img class="btn-icon" src="https://unsplash.com" alt="Telegram">
-                <span class="btn-text">iZolated в Steam</span>
+                <img class="btn-icon" src="https://crookedroad.github.io/sites-pages/icons/iZolated_icon.png" alt="iZolated">
+                <span class="btn-text">iZolated</span>
             </a>
         </div>
     </div>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои ссылки</title>
+    <style>
+        :root {
+            --bg-color: #111112;
+            --text-color: #f8fafc;
+            --card-bg: #1e293b;
+            --card-hover: #334155;
+            --accent-color: #ec8a05;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        /* Стиль для маленьких аватарок на кнопках */
+        .btn-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0; /* Чтобы картинка не сжималась */
+            background-color: rgba(255, 255, 255, 0.1); /* Фон на случай долгой загрузки */
+        }
+
+        /* Выравнивание текста строго по центру кнопки */
+        .btn-text {
+            flex-grow: 1;
+            text-align: center;
+            padding-right: 32px; /* Компенсируем ширину иконки, чтобы текст был ровно по центру */
+        }
+
+        .link-card:hover {
+            background-color: var(--card-hover);
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .link-card:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Аватарка -->
+        <img class="profile-img" src="https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/9db11fe45c267a75f8443a54350fbb57~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=68bffad2&x-expires=1781010000&x-signature=uYWrprdLh7JPGqmffwT7XgMMAIM%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a" alt="Профиль">
+
+        <!-- Имя или Название проекта -->
+        <h1>Crooked Road</h1>
+
+        <!-- Краткое описание -->
+        <p class="description">Добро пожаловать! Здесь собраны все ссылки на мои социальные сети и актуальные проекты.</p>
+
+        <!-- Список кнопок-ссылок -->
+        <div class="links-container">
+            <a href="https://t.me/crooked_road" target="_blank" class="link-card">
+                <img class="btn-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/3840px-Telegram_2019_Logo.svg.png" alt="Telegram">
+                <span class="btn-text">Telegram канал</span>
+            </a>
+            <a href="https://vk.com/crooked_road" target="_blank" class="link-card">
+                <img class="btn-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="Telegram">
+                <span class="btn-text">Сообщество ВКонтакте</span>
+            </a>
+
+            <a href="https://store.steampowered.com/app/4095190/Angels_Dreams/" target="_blank" class="link-card">
+                <img class="btn-icon" src="https://unsplash.com" alt="Telegram">
+                <span class="btn-text">Angel`s Dreams в Steam</span>
+            </a>
+            <a href="https://store.steampowered.com/app/2799360/iZolated/" target="_blank" class="link-card">
+                <img class="btn-icon" src="https://unsplash.com" alt="Telegram">
+                <span class="btn-text">iZolated в Steam</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
